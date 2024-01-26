@@ -1,0 +1,778 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    min-height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(2, 3, 6, .9),rgba(27, 3, 14, 0.713), rgba(15, 15, 58, .9)) ,url("../Images/GymsoFitness.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+header nav{
+    display: flex;
+    padding: 40px 10rem 0rem 10rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header nav h1 a{
+    font-size: 1.5rem;
+    color: #fff;
+    transition: 0.5s;
+}
+
+header nav h1 a:hover{
+    color: var(--orange);
+}
+
+.nav-links ul li a{
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0px 8px;
+    position: relative;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #eb6363;
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+a.login{
+    text-align: center  ;
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 15px;
+    border-radius: 40px;
+    background-color: var(--orange);
+    transition: .5s;
+}
+a.login:hover{
+    background-color: #fff;
+    border: none;
+    color: orange;
+}
+
+.text-box{
+    width:90% ;
+    color: #fff;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h2{
+    color: #9aa59e;
+    font-size: 2vw;
+    font-weight: 400;
+}
+
+.text-box h1{
+    margin: 1vw 0 2vw 0;
+    font-size: 4vw;
+}
+
+.get-started{
+    letter-spacing: .7px;
+    font-size: 1.5vw;
+    color: #fff;
+    margin-right: 1.5vw;
+    transition:.5s;
+    padding: 9px;
+}
+
+.get-started:hover{
+    color: orange;
+}
+
+.learn-more{
+    font-size: 1.5vw;
+    color: var(--orange);
+    border: 1px solid var(--orange);
+    padding: 1.2vw 1.7vw;
+    letter-spacing: .5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.learn-more:hover{
+    color: orange;
+    /* background-color: ; */
+    transition: 1s;
+    border:1px solid #fff;
+}
+
+nav .fa-close{
+    display: none;
+}
+
+nav .material-icons{
+    display: none;
+}
+
+@media (max-width:760px){
+    .header-navbar{
+        justify-content: space-between;
+    }
+
+    .nav-links{
+        position: absolute;
+        background-color: var(--dark);
+        height:95vh;
+        width:200px;
+        top:0;
+        right: -200px;
+        text-align: center;
+        padding: 15px 0;
+        border-radius: 20px 0 0 20px ;
+        overflow: hidden;
+        display: none;
+        z-index: 100;
+        transition: right .5s;
+    }
+
+    .nav-links ul li{
+        display: block;
+    }
+
+    .nav-links ul li::after{
+        content: '';
+        width: 0%;
+        height: 2px;
+        background: #eb6363;
+        display: block;
+        margin: auto;
+        transition: .5s;
+    }
+
+    .nav-links ul li:hover::after{
+        width: 50%;
+    }
+
+    nav .fa-close{
+        display: block;
+        color: #fff;
+        padding-bottom: 10px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    nav .fa-close:hover{
+        color: #f13a11;
+    }
+
+    nav .material-icons{
+        display: block;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    nav .material-icons:hover{
+        color: #f13a11;
+    }
+
+    .login{
+        font-size: 10px;
+    }
+
+    .group1{
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .text-box h1{
+        font-size: 5vw;
+    }
+
+    .text-box p{
+        font-size: 2.7vw;
+    }
+
+    .get-started{
+        font-size: 2vw;
+        
+    }
+    .learn-more{
+        font-size: 2vw;
+
+    }
+    
+}
+
+.Home{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #181515;
+    color: #fff;
+    padding: 50px 0 80px;
+}
+
+.sign-up{
+    margin-right: 2rem;
+    padding-right: 100px;
+    border-right: 2px solid rgba(89, 95, 93, 0.7);
+}
+
+.sign-up h1{
+    font-size: 2rem;
+}
+
+.sign-up h2{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.sign-up p{
+    color: rgb(89, 95, 93);
+    padding-bottom: 5px;
+}
+
+.sign-up button{
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.sign-up a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 50px;
+    background-color: #f13a11;
+    letter-spacing: .6px;
+    font-weight: 600;
+}
+
+.sign-up a:hover{
+    color: orange;
+    background-color: #fff;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.work-hours{
+    margin-right: 50px;
+}
+
+.work-hours h1{
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.work-hours .day{
+    font-weight: 700;
+}
+
+.work-hours .hours{
+    color: #666d69;
+}
+
+@media(max-width:900px){
+    .Home{
+        flex-direction: column;
+        align-items: center;
+    }
+    .sign-up{
+        text-align: center;
+        margin: .5rem;
+        border: none;
+        padding: 0 0 20px;
+    }
+    .sign-up h1{
+        font-size: 2.5rem;
+    }
+
+    .sign-up a{
+        padding: .7vw 2vw;
+        font-size: 1rem;
+    }
+
+    .work-hours{
+        padding-top: 40px;
+        font-size: larger;
+    }
+    .work-hours h1{
+        font-size: 40px;
+    }
+
+    .work-hours p{
+        text-align: center;
+    }
+
+    .work-hours .hours{
+        font-size: 16px;
+    }
+
+}
+
+.about-us{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 70px 0;
+}
+
+.text{
+    width: 40%;
+}
+
+.text h1{
+    color: #000;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.text p{
+    font-size: 15px;
+    color:dark;
+}
+
+.container{
+    width: 220px;
+    height: 350px;
+    margin: 20px 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.25), 0 5px 15px rgba(0,0,0,.2);
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.image-1, 
+.image-2{
+    background-size: cover;
+    background-position: center;
+    grid-area: 1 / 1 / 8 / 11;
+}
+
+.image-1{
+    background-image: url(../Images/Boxingcoach.jpg);
+}
+
+.image-2{
+    background-image: url("../Images/PersonalTrainer.jpg");
+}
+
+.about-us .container .description{
+    grid-area: 8 / 1 / 11 / 11;
+    display: grid;
+   grid-template-columns: repeat(10, 1fr);
+   grid-template-rows: repeat(10, 1fr);
+}
+
+.about-us .container .description h1{
+    grid-area: 3 / 2 / 4 / 6;
+    font-size: 25px;
+    
+}
+
+.about-us .container .description h2{
+    padding-top: 3px;
+    grid-area: 6 / 2 / 7 / 8;
+    color: var(--gray);
+    font-size: 18px;
+    
+}
+
+.about-us .container .description a{
+    color: #000;
+    transition: color .4s;
+}
+
+.about-us .container .description a:hover{
+    color: var(--orange);
+}
+.about-us .container .description .twitter {
+    grid-area: 3 / 9 / 4 / 10;
+    font-size: 22px;
+}
+
+.about-us .container .description .instagram{
+    grid-area: 6 / 9 / 7 / 10;
+    font-size: 22px;
+}
+
+
+
+
+.training-classes{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.training-classes .head{
+    text-align: center;
+}
+
+.training-classes  .head h1{
+    color: var(--gray);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.training-classes  .head h2{
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+.training-classes .carts{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.training-classes  .box{
+    width: 350px;
+    height: 450px;
+    margin: 30px 20px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.379);
+}
+
+.training-classes .box-1 .img{
+    background-image:url(../Images/yoga-class.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-area: 1 / 1 / 7 / 11;
+}
+
+.training-classes .box-2 .img{
+    background-image:url(../Images/crossfit-class.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-area: 1 / 1 / 7 / 11;
+}
+
+.training-classes .box-3 .img{
+    background-image:url(../Images/cardio-class.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-area: 1 / 1 / 7 / 11;
+}
+
+/* ready classes */
+
+.training-classes .box .info{
+    grid-area: 7 / 1 / 11 / 11;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+                                                          
+
+.training-classes .box .info h1{
+    font-size: 28px;
+    grid-area: 2 / 2 / 4 / 5;
+}
+
+.training-classes .box .info h2{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--gray);
+    grid-area: 4 / 2 / 4 / 9;
+}
+
+.training-classes .box .info h2 span{
+    color: #000;
+}
+
+.training-classes .box .info p{
+    color: var(--gray);
+    font-size: 1.2rem;
+    grid-area: 6 / 2 / 9 / 9;
+}
+
+.training-classes .box .info .price{
+    display: inline-block;
+    color: #fff;
+    background-color: var(--orange);
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 16px;
+    border-radius: 50%;
+    text-align: center;
+    grid-area: 2 / 8 / 5 / 10 ;
+}
+
+.deal {
+    text-align: center;
+    margin: 10px;
+    font-size: larger;
+    background-color: black;
+    color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.schedules{
+    width: 100%;
+    background-color: var(--dark-color);
+    color: white;
+    display: flex;
+    margin: 50px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.schedules table{
+    text-align: center;
+    margin: 130px 20px;
+    
+}
+
+.schedules table caption{
+margin-bottom: 50px;
+}
+
+.schedules table caption h1{
+    font-size: 2.5rem;
+    letter-spacing: -2px;
+}
+
+.schedules table caption h2{
+    color: var(--gray-color);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.schedules table, th, td{
+    padding: 18px 16px;
+    gap: 0px;
+    border: 1px solid #212122;
+    border-collapse: collapse;
+
+}
+
+.rs{
+    background-color: rgb(63, 51, 147);
+}
+
+.rs:hover{
+    background-color: teal;
+    transition: 1s;
+}
+
+.schedules table td h4{
+    color: var(--gray);
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.schedules table td h1{
+    font-size: 1rem;
+}
+
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+} 
+
+.form{
+    text-align: center;
+    margin: 10px 10px 10px 20px;
+}   
+
+.form h2{
+    font-size: 35px;
+}
+    
+input[type="text"], input[type="email"]{
+    width: 350px;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #95a59b;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+
+textarea{
+    width: 350px;
+    height: 200px;
+    padding: 10px;
+    margin: 5px 0;
+    resize: none;
+}
+
+.send-message{
+    width: 370px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    letter-spacing: .5px;
+    border-radius: 2px;
+    transition: .5s;
+    border: none;
+}
+
+.send-message:hover{
+    background-color: #f13a11;
+}
+
+iframe{
+    width: 35vw;
+    height: 30vw;
+    margin: 30px 0;
+}
+
+footer{
+    background-color: var(--dark-color);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 50px;
+    margin-top: 40px;
+}
+
+footer section{
+    margin: 20px 35px;
+}
+
+footer section h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+footer section h2::after{
+    content: '';
+    width: 40%;
+    height: 2px;
+    background: var(--success);
+    display: block;
+    
+}
+
+footer section ul{
+    list-style: none;
+}
+
+footer section ul li{
+    padding: 4px;
+}
+
+footer section ul li a{
+    color: var(--gray-color);
+    font-size: 15px;
+    font-weight: 500;
+    transition: .5s ease;
+}
+
+footer section ul li a:hover{
+    color: var(--danger);
+    padding: 4px;
+}
+
+footer .social-media a{
+    background-color: var(--gray);
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    margin: 20px 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: .4s;
+    
+}
+
+footer .social-media a:hover{
+    background-color: var(--indigo);
+}
+
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #f13a11;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --dark-color: #171819;
+    --gray-color: #909090;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin: 10px;
+}
+
+th,td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+button {
+    /* background-color: #4CAF50; */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 3px;
+}

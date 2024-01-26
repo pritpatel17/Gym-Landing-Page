@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    background: rgb(88, 71, 123);
+}
+
+header{
+    width: 100%;
+}
+header nav{
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a{
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(196, 92, 92);
+    font-size: 48px;
+}
+@media (max-width:390px){
+    nav h1{
+        font-size: 30px;
+    } 
+}
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.log-in{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 320px;
+    height: 480px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    align-items: center;
+    box-shadow: 0 20px 34px rgba(0,0,0,.25), 0 16px 16px rgba(0,0,0,.2);
+}
+.log-in h1{
+    text-transform: capitalize;
+    font-size: 28px;
+}
+.log-in form input{
+    width: 230px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid rgb(146, 153, 141);
+    padding: 5px 8px;
+}
+.log-in form input[type="text"]{
+    margin-bottom: 20px;
+}
+.log-in form a{
+    display: block;
+    text-decoration: none;
+    font-size: 12px;
+    text-align: right;
+    padding-top: 3px;
+    color: rgb(93, 93, 95);
+    letter-spacing: .6px;
+    transition: .5s;
+}
+.log-in form a:hover{
+    color: rgb(156, 82, 48);
+    font-size: 12.5px;
+}
+.log-in form button{
+    border: none;
+    color: #fff;
+    background: rgb(81,233,219);
+    /* background: linear-gradient(90deg, rgba(81,233,219,1) 0%, rgba(72,80,185,1) 46%, rgba(159,69,176,1) 83%); */
+    width: 250px;
+    height: 40px;
+    border-radius: 30px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: 1s;
+}
+.log-in form button:hover{
+    background: rgb(81,233,219);
+    /* background: linear-gradient(276deg, rgba(81,233,219,1) 0%, rgba(72,80,185,1) 46%, rgba(159,69,176,1) 83%); */
+}
+.sign-up ul li{
+    list-style: none;
+    display: inline-block; 
+    padding: 8px 10px;
+}
+.sign-up .fa-facebook-official{
+    color: #fff;
+    color: rgb(43, 37, 122);
+    font-size: 30px;
+      
+}
+.sign-up .fa-twitter{
+    font-size:30px ;
+    color: rgb(106, 196, 226);
+}
+.sign-up .fa-google-plus-official{
+    font-size: 30px;
+    color: red;
+}
+.create-account p{
+    font-size: 12px;
+    padding: 3px 0;
+}
+.create-account p a{
+    text-decoration: none;
+    color: blue;
+}
+
+
+
